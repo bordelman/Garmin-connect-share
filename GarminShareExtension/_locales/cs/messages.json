@@ -1,0 +1,53 @@
+{
+    "appName": {
+    "message": "Sdílení tréninků pro Garmin Connect"
+  },
+  "description": {
+    "message": "Toto rozšíření umožnuje sdílení tréninků pomocí emailu, facebooku nebo jakékoliv chatovací platformy díky stringifiedJSON formátu."
+  },
+  "Import": {
+    "message": "Importovat"
+  },
+  "clipboard": {
+    "message": " - uloženo do schránky"
+  },
+  "compatibleDevice": {
+    "message": "Vaše kompatibilní zařízení:"
+  },
+  "compatibleDevices": {
+    "message": "Vaše kompatibilní zařízení:"
+  },
+  "inputHint": {
+    "message": "Vložte trénink, který chcete importovat:"
+  },
+  "inputPlaceholder": {
+    "message": "Tréninková data"
+  },
+  "bodyText": {
+    "message": "Chcete importovat "
+  },
+  "onlyImport": {
+    "message": "Pouze importovat do databáze"
+  },
+  "importAndSend": {
+    "message": "Importovat a odeslat"
+  },
+  "imported": {
+    "message": " - importováno do databáze"
+  },
+  "andSent": {
+    "message": " a odesláno do"
+  },
+  "noDevice": {
+    "message": "Žádné vybrané zařízení"
+  },
+  "noDeviceText": {
+    "message": "Musíte vybrat alespoň jedno zařízení do kterého chcete odeslat trénink."
+  },
+  "noData": {
+    "message": "Žádná data tréninku"
+  },
+  "noDataText": {
+    "message": "Nejsou k dispozici data pro import tréninku"
+  }
+}

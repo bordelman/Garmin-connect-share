@@ -1,0 +1,53 @@
+{
+  "appName": {
+    "message": "Garmin Connect training share"
+  },
+  "description": {
+    "message": "Extension enables training sharing. Share training via email, facebook or any chat platform due to using stringified JSON format."
+  },
+  "import": {
+    "message": "Import"
+  },
+  "clipboard": {
+    "message": " copied to clipboard"
+  },
+  "compatibleDevice": {
+    "message": "Your compatible device:"
+  },
+  "compatibleDevices": {
+    "message": "Your compatible devices:"
+  },
+  "inputHint": {
+    "message": "Enter training to import:"
+  },
+  "inputPlaceholder": {
+    "message": "Training data"
+  },
+  "bodyText": {
+    "message": "Do you want to import "
+  },
+  "onlyImport": {
+    "message": "Only import to database"
+  },
+  "importAndSend": {
+    "message": "Import & send"
+  },
+  "imported": {
+    "message": " has been imported to database"
+  },
+  "andSent": {
+    "message": " and sent to"
+  },
+  "noDevice": {
+    "message": "No device chosen"
+  },
+  "noDeviceText": {
+    "message": "You have to chose at least one compatible device to be able to import training."
+  },
+  "noData": {
+    "message": "No training data"
+  },
+  "noDataText": {
+    "message": "There is no training data to be imported"
+  }
+}
