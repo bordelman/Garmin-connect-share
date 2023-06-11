@@ -11,6 +11,12 @@
   "clipboard": {
     "message": " copied to clipboard"
   },
+  "download": {
+    "message": " downloaded"
+  },
+  "downloadTraining": {
+    "message": "Download"
+  },
   "compatibleDevice": {
     "message": "Your compatible device:"
   },

@@ -1,4 +1,4 @@
-.dialogContainer {
+.dialog-container {
     position: fixed;
     left: 0;
     width: 100vw;
@@ -27,7 +27,7 @@
     cursor: default;
 }
 
-.dialogCloseButton {
+.dialog-close-button {
     color: #6c6c6c;
     opacity: 1;
     font-weight: 400;
@@ -42,14 +42,14 @@
     outline: none
 }
 
-.dialogHeader {
+.dialog-header {
     padding: 7px 15px;
     color: #222;
     overflow: hidden;
     line-height: 1;
 }
 
-.dialogHeader h3 {
+.dialog-header h3 {
     line-height: inherit;
     padding: 8px 0;
     margin: 0;
@@ -63,14 +63,14 @@
     text-overflow: ellipsis;
 }
 
-.dialogBody {
+.dialog-body {
     position: relative;
     max-height: calc(100vh - 180px);
     padding: 15px;
     overflow-y: auto;
 }
 
-.compatibleDevices {
+.compatible-devices {
     position: relative;
     display: -webkit-flex;
     display: flex;
@@ -79,34 +79,34 @@
     margin-top: 20px;
 }
 
-.deviceImage {
+.device-image {
     margin-right: 10px;
     width: 70px;
     display: inline-block;
 }
 
-.deviceName {
+.device-name {
     font-size: 18px;
     font-weight: 100;
     margin-bottom: 2px;
 }
 
-.deviceCheckbox {
+.device-checkbox {
     margin-top: 0;
     margin-left: 10px;
     margin-right: 10px
 }
 
-.bodyText {
+.body-text {
     margin-top: 20px;
     margin-bottom: 4px;
 }
 
-.bodyInput {
+.body-input {
     width: -webkit-fill-available
 }
 
-.dialogFooter {
+.dialog-footer {
     padding: 14px 15px 15px;
     margin-bottom: 0;
     text-align: right;
@@ -114,12 +114,12 @@
     background: #fafafa;
 }
 
-.checkboxSpan {
+.checkbox-span {
     float: left;
     margin-top: 5px;
 }
 
-.checkboxSpanSpan {
+.checkbox-span-span {
     margin-left: 5px;
     font-size: small;
 }
@@ -128,7 +128,7 @@
     margin-right: 10px;
 }
 
-.dialogBackground {
+.dialog-background {
     position: absolute;
     top: 0;
     right: 0;
@@ -139,7 +139,7 @@
     opacity: .8;
 }
 
-.notificationStyle {
+.notification-style {
     transition: all 1000ms ease 0s;
     position: fixed;
     z-index: 1;
@@ -151,7 +151,7 @@
     opacity: 1;
 }
 
-.notificationBox {
+.notification-box {
     display: -webkit-flex;
     display: flex;
     background: #282828;
@@ -165,7 +165,7 @@
     max-width: 600px;
 }
 
-.notificationText {
+.notification-text {
     padding: 14px 20px;
     -webkit-flex-grow: 1;
     flex-grow: 1;
@@ -177,7 +177,7 @@
     float: left;
 }
 
-.shareIconSpan {
+.share-icon-span {
     padding-left: 11px;
     padding-right: 11px;
     font-size: 18px;

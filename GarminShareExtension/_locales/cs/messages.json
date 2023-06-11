@@ -11,6 +11,12 @@
   "clipboard": {
     "message": " - uloženo do schránky"
   },
+  "download": {
+    "message": " - uloženo do souboru"
+  },
+  "downloadTraining": {
+    "message": "Stáhnout"
+  },
   "compatibleDevice": {
     "message": "Vaše kompatibilní zařízení:"
   },
