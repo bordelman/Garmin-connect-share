@@ -78,21 +78,24 @@ function addExportIcon() {
         i < document.getElementsByClassName("workout-actions").length;
         i++
       ) {
-        let span = document.createElement("span");
-        let parent = document.getElementsByClassName("workout-actions")[i];
-        span.className = "shareIconSpan";
-        span.dataset.id =
-          document.getElementsByClassName("send-to-device")[i].dataset.id;
-        span.dataset.order = "" + i;
-        span.addEventListener("click", function () {
-          exportTraining(
-            document.getElementsByClassName("send-to-device")[i].dataset.id
-          );
-        });
-        let shareIcon = document.createElement("ico");
-        shareIcon.className = "icon-share";
-        span.appendChild(shareIcon);
-        parent.insertBefore(span, parent.childNodes[2]);
+        const parent = document.getElementsByClassName("workout-actions")[i];
+
+        if (!parent.getElementsByClassName('shareIconSpan').length) {
+          let span = document.createElement("span");
+          span.className = "shareIconSpan";
+          span.dataset.id =
+            document.getElementsByClassName("send-to-device")[i].dataset.id;
+          span.dataset.order = "" + i;
+          span.addEventListener("click", function () {
+            exportTraining(
+              document.getElementsByClassName("send-to-device")[i].dataset.id
+            );
+          });
+          let shareIcon = document.createElement("ico");
+          shareIcon.className = "icon-share";
+          span.appendChild(shareIcon);
+          parent.insertBefore(span, parent.childNodes[2]);
+        }
       }
     }
   }, 25);
@@ -214,8 +217,8 @@ function showDialog() {
   let checkbox = document.createElement("input");
   checkbox.type = "checkbox";
   checkbox.id = "onlyImport";
-  checkboxSpan.style.display= "none",
-  checkbox.checked = true;
+  checkboxSpan.style.display = "none",
+    checkbox.checked = true;
   checkbox.onchange = deviceCheckboxToggle;
   let checkboxSpanSpan = document.createElement("span");
   checkboxSpanSpan.className = "checkboxSpanSpan";
@@ -231,11 +234,11 @@ function showDialog() {
   dialogBackground.className = "dialogBackground";
 
   header.appendChild(h3);
-//   compatibleHead.appendChild(compatibleHeadText);
+  //   compatibleHead.appendChild(compatibleHeadText);
   dialogBody.appendChild(compatibleHead);
-//   for (let i = 0; i < compatibleDeviceDivs.length; i++) {
-//     dialogBody.appendChild(compatibleDeviceDivs[i]);
-//   }
+  //   for (let i = 0; i < compatibleDeviceDivs.length; i++) {
+  //     dialogBody.appendChild(compatibleDeviceDivs[i]);
+  //   }
   dialogBody.appendChild(bodyText);
   dialogBody.appendChild(bodyInput);
   checkboxSpan.appendChild(checkbox);
@@ -305,7 +308,7 @@ function importTraining() {
         ? showNotification(true)
         : sendTraining()
     );
-    window.location.reload()
+  window.location.reload()
 }
 
 function checkImportProperties() {
@@ -337,25 +340,25 @@ function checkImportProperties() {
 function sendTraining() {
   for (let i = 0; i < targetDevices.length; i++) {
     const acces_token = JSON.parse(localStorage.token).access_token,
-    requestConfig = {
-      headers: {
-        accept: "application/json, text/plain, */*",
-        "accept-language": "en-US,en;q=0.9,cs;q=0.8",
-        authorization: "Bearer " + acces_token,
-        "di-backend": "connectapi.garmin.com",
-        "content-type": "application/json;charset=UTF-8",
-        nk: "NT",
-        "sec-fetch-dest": "empty",
-        "sec-fetch-mode": "cors",
-        "sec-fetch-site": "same-origin",
-        "x-app-ver": "4.39.1.0",
-      },
-      referrerPolicy: "strict-origin-when-cross-origin",
-      body: `[{"deviceId":${targetDevices[i].id},"messageUrl":"workout-service/workout/FIT/${workoutId}","messageType":"workouts","messageName":"${importWorkoutName}","groupName":null,"priority":1,"fileType":"FIT","metaDataId":${workoutId}}]`,
-      method: "POST",
-      mode: "cors",
-      credentials: "include",
-    };
+      requestConfig = {
+        headers: {
+          accept: "application/json, text/plain, */*",
+          "accept-language": "en-US,en;q=0.9,cs;q=0.8",
+          authorization: "Bearer " + acces_token,
+          "di-backend": "connectapi.garmin.com",
+          "content-type": "application/json;charset=UTF-8",
+          nk: "NT",
+          "sec-fetch-dest": "empty",
+          "sec-fetch-mode": "cors",
+          "sec-fetch-site": "same-origin",
+          "x-app-ver": "4.39.1.0",
+        },
+        referrerPolicy: "strict-origin-when-cross-origin",
+        body: `[{"deviceId":${targetDevices[i].id},"messageUrl":"workout-service/workout/FIT/${workoutId}","messageType":"workouts","messageName":"${importWorkoutName}","groupName":null,"priority":1,"fileType":"FIT","metaDataId":${workoutId}}]`,
+        method: "POST",
+        mode: "cors",
+        credentials: "include",
+      };
     fetch(
       "https://connect.garmin.com/device-service/devicemessage/messages",
       requestConfig
@@ -373,9 +376,9 @@ function showNotification(onlyImport) {
   }
   notification(
     trainingData.workoutName +
-      chrome.i18n.getMessage("imported") +
-      (onlyImport ? "" : chrome.i18n.getMessage("andSent") + devices) +
-      "."
+    chrome.i18n.getMessage("imported") +
+    (onlyImport ? "" : chrome.i18n.getMessage("andSent") + devices) +
+    "."
   );
   closeDialog();
 }
